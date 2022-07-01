@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+    background-color: rgb(210, 96, 96);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav h2 {
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li {
+    color: white;
+    margin: 0px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shop {
+    display: flex;
+    align-items: center;
+}
+
+.shop p {
+    color: white;
+    margin-left: 12px;
+}
+
+.count {
+    background-color: rgb(210, 96, 96);
+    max-width: 10%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button {
+    font-size: 26px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons p {
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    color: white;
+}
+
+.add-cart button {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 2px solid red;
 }
