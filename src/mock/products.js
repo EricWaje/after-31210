@@ -68,30 +68,24 @@ export const productos = [
     },
 ];
 
-const producto = {
-    id: 1,
-    title: 'Remera',
-    price: 200,
-    stock: 4,
-
-    image: 'https://res.cloudinary.com/ericwaje/image/upload/v1619372707/remera3_vc9mqa.jpg',
-    category: 'remeras',
-    description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
-};
-
-export const getProds = () => {
+export const getProds = (categoryId) => {
     return new Promise((resolve, reject) => {
+        const productosFiltrados = productos.filter(
+            (prod) => prod.category === categoryId
+        );
         setTimeout(() => {
-            resolve(productos);
+            categoryId ? resolve(productosFiltrados) : resolve(productos);
         }, 1000);
     });
 };
 
-export const getProd = () => {
+export const getProd = (id) => {
     return new Promise((resolve, reject) => {
+        const productoEncontrado = productos.find(
+            (prod) => prod.id === Number(id)
+        );
         setTimeout(() => {
-            resolve(producto);
+            resolve(productoEncontrado);
         }, 1000);
     });
 };
