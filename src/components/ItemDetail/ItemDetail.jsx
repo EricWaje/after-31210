@@ -7,6 +7,8 @@ import ItemCount from '../ItemCount/ItemCount';
 const ItemDetail = ({ product }) => {
     const [cantidad, setCantidad] = useState(0);
     const { addToCart } = useContext(CartContext);
+    //const valor = useContext(CartContext)
+    //valor.addToCart
 
     const onAdd = (cant) => {
         setCantidad(cant);
