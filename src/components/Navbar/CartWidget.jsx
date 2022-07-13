@@ -5,7 +5,7 @@ const CartWidget = () => {
     return (
         <div className="shop">
             <AiOutlineShoppingCart color="white" size={25} />
-            <p>4</p>
+            <p></p>
         </div>
     );
 };

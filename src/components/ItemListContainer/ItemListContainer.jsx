@@ -7,28 +7,28 @@ const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    //const { categoryId } = useParams();
+    const { categoryId } = useParams();
     //console.log(parametro.categoryId);
-    const categoryId = 'jewelery';
+    //const categoryId = 'jewelery';
 
     //jewelery
     useEffect(() => {
         setLoading(true);
-
+        //'https://fakestoreapi.com/products';
+        /* 
         const URL = categoryId
             ? `https://fakestoreapi.com/products/category/${categoryId}`
             : 'https://fakestoreapi.com/products';
 
-        //'https://fakestoreapi.com/products';
 
         fetch(URL)
             .then((res) => res.json())
             .then((json) => setProducts(json))
             .finally(() => {
                 setLoading(false);
-            });
+            }); */
 
-        /* getProds(categoryId)
+        getProds(categoryId)
             .then((res) => {
                 setProducts(res);
             })
@@ -37,11 +37,11 @@ const ItemListContainer = () => {
             })
             .finally(() => {
                 setLoading(false);
-            }); */
+            });
     }, [categoryId]);
 
     return (
-        <div>
+        <div className="item-list-container">
             {loading ? (
                 <h2>Cargando...</h2>
             ) : (

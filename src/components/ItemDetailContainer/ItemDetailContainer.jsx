@@ -11,15 +11,15 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         setLoading(true);
-        const URL = `https://fakestoreapi.com/products/${id}`;
+        /* const URL = `https://fakestoreapi.com/products/${id}`;
         fetch(URL)
             .then((res) => res.json())
             .then((json) => setProduct(json))
             .finally(() => {
                 setLoading(false);
-            });
+            }); */
 
-        /* getProd(id)
+        getProd(id)
             .then((res) => {
                 setProduct(res);
             })
@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
             })
             .finally(() => {
                 setLoading(false);
-            }); */
+            });
     }, [id]);
 
     //console.log(product);
